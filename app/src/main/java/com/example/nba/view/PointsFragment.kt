@@ -28,6 +28,12 @@ class PointsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        /*
+         * TODO: Get model from viewModel.
+         * TODO: Get views by ID.
+         * TODO: Assign model values to views.
+         */
         return inflater.inflate(R.layout.fragment_points, container, false)
     }
 

@@ -6,15 +6,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 import com.example.nba.R
 import com.example.nba.viewModel.TabPointsViewModel
 
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class PointsFragment : Fragment() {
     private lateinit var tabViewModel: TabPointsViewModel
 
@@ -24,18 +20,37 @@ class PointsFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // TODO: Define events
+        // TODO: Handle events
+        // TODO: Fix tab titles
 
-        /*
-         * TODO: Get model from viewModel.
-         * TODO: Get views by ID.
-         * TODO: Assign model values to views.
-         */
-        return inflater.inflate(R.layout.fragment_points, container, false)
+        // Inflate the layout for this fragment
+        val rootView = inflater.inflate(R.layout.fragment_points, container, false)
+        updateViews(rootView)
+
+        return rootView
     }
 
+    private fun defineEvents() {}
 
+    private fun updateViews(rootView: View) {
+        // Get views by ID
+        val textTeam1Name: TextView = rootView.findViewById(R.id.textViewTeam1Name)
+        val textTeam1City: TextView = rootView.findViewById(R.id.textViewTeam1City)
+        val textTeam1Points: TextView = rootView.findViewById(R.id.textViewTeam1Points)
+        val textTeam2Name: TextView = rootView.findViewById(R.id.textViewTeam2Name)
+        val textTeam2City: TextView = rootView.findViewById(R.id.textViewTeam2City)
+        val textTeam2Points: TextView = rootView.findViewById(R.id.textViewTeam2Points)
+        // Get model from viewModel
+        val leaders = tabViewModel.getLeadersByPoints()
+        // Assign model values to views
+        textTeam1Name.text = leaders[0].name
+        textTeam1City.text = leaders[0].city
+        textTeam1Points.text = leaders[0].category
+        textTeam2Name.text = leaders[1].name
+        textTeam2City.text = leaders[1].city
+        textTeam2Points.text = leaders[1].category
+    }
 }

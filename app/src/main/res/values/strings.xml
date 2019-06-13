@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">NBA</string>
     <string name="splash_logo">Splash Logo</string>
-    <string name="tab_points">Points</string>
-    <string name="tab_rebounds">Rebounds</string>
-    <string name="tab_assists">Assists</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_points">Point Leaders</string>
+    <string name="tab_rebounds">Rebound Leaders</string>
+    <string name="tab_assists">Assist Leaders</string>
 </resources>

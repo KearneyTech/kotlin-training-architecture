@@ -1,14 +1,24 @@
 package com.example.nba.repository
 
+import com.example.nba.model.Leader
 import com.example.nba.model.Team
 
-class TeamRepository {
-    private val teams = arrayOf(
+object TeamRepository {
+    private val teams = arrayListOf(
         Team(1, "Winners"),
         Team(2, "Losers")
     )
 
-    fun getTeams(): Array<Team> {
+    private val leadersByPoints = arrayListOf<Leader>(
+        Leader("Winners", "Here", "108.1"),
+        Leader("Losers", "There","107.5")
+    )
+
+    fun getLeadersByPoints(): ArrayList<Leader> {
+        return leadersByPoints
+    }
+
+    fun getTeams(): ArrayList<Team> {
         return teams
     }
 

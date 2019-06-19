@@ -20,7 +20,7 @@ object TeamRepository {
 //        Leader("Losers", "There","107.5")
 //    )
 
-    fun getLeadersByPoints(): Observable<ArrayList<Leader>> {
+    fun getLeadersByPoints(): Observable<Leader> {
         val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .baseUrl("https://stats.nba.com").build()

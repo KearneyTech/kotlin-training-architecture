@@ -7,7 +7,7 @@ import com.example.nba.repository.TeamRepository
 import io.reactivex.Observable
 
 class TabPointsViewModel: ViewModel() {
-    fun getLeadersByPoints(): Observable<ArrayList<Leader>> {
+    fun getLeadersByPoints(): Observable<Leader> {
         SystemClock.sleep(5000)
         return TeamRepository.getLeadersByPoints()
     }

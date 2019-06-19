@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface INetworkAPI {
     @GET("")
-    fun getPointLeaders(): Observable<ArrayList<Leader>>
+    fun getPointLeaders(): Observable<Leader>
 }

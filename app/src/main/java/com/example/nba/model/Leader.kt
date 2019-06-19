@@ -4,10 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 //data class Leader(val name: String, val city: String, val category: String)
 data class Leader(
-    @SerializedName("rowSet") val rowSet: String
+    @SerializedName("resultSets") val resultSets: ArrayList<Result>
 )
 
-data class oddBall(
-    val rank: String,
-    val teamID: String
+data class Result(
+    @SerializedName("rowSet") val rowSet: ArrayList<String>? = null
 )

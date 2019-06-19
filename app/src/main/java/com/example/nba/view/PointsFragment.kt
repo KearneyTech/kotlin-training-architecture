@@ -59,12 +59,14 @@ class PointsFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ leaders ->
                 // Assign model values to views
+/*
                 textTeam1Name.text = leaders[0].name
                 textTeam1City.text = leaders[0].city
                 textTeam1Points.text = leaders[0].category
                 textTeam2Name.text = leaders[1].name
                 textTeam2City.text = leaders[1].city
                 textTeam2Points.text = leaders[1].category
+*/
             }
 
 
